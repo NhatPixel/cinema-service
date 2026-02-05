@@ -7,5 +7,5 @@ type Cinema struct {
 	Location   string    `json:"location"`
 	Status	string	`json:"status"`
 	ManagerID    string   `json:"manager_id"`
-	ManagerIDs    []string   `json:"manager_ids"`
+	StaffIDs    []string   `json:"staff_ids"`
 }

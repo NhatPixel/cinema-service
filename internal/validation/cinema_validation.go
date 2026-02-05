@@ -15,6 +15,11 @@ func TranslateValidationError(err error) error {
 
 	for _, fe := range ve {
 		switch fe.Field() {
+		case "ID":
+			switch fe.Tag() {
+			case "required":
+				return fmt.Errorf("ID không được để trống!")
+			}
 		case "Name":
 			switch fe.Tag() {
 			case "required":
